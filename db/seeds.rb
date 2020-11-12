@@ -8,7 +8,11 @@
 require 'json'
 require 'open-uri'
 
+
+# Seed ingredients
+Ingredient.delete_all
+
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 data = JSON.parse(open(url).read)
 
-data.each { |i| puts i['strIngredient1'] if !data.first }
+data['drinks'].each { |i| Ingredient.create!(name: i.values[0]) }
