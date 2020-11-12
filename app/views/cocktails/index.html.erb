@@ -2,7 +2,7 @@
 <div class="d-flex flex-wrap cocktail-box">
 <% @cocktails.each do |cocktail| %>
   <div class="card m-2 d-flex">
-    <%#= image_tag "#", alt: "alttext", class: 'card-img-top' %>
+    <img src="<%= cocktail.image_url %>" alt="" class="card-img-top card-image">
     <div class="card-body">
       <h5 class="card-title"><%= cocktail.name %></h5>
       <%= link_to 'Discover more', cocktail_path(cocktail), class: "btn btn-outline-secondary" %>
