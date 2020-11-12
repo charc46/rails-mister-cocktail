@@ -1,0 +1,19 @@
+.cocktail-name {
+  font-family: $cocktail-font;
+  color: $gold;
+}
+
+.cocktail-details {
+  font-family: $text-font;
+  color: $gold;
+}
+
+.btn {
+  color: $gold;
+  border: 1px solid $gold;
+
+    &:hover {
+      background-color: $gold;
+      color: $charcoal;
+    }
+}

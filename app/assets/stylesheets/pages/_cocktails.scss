@@ -1,0 +1,38 @@
+// Specific CSS for your home-page
+body {
+  background-color: $charcoal;
+}
+
+.cocktail-box {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+h1 {
+  color: $gold;
+  font-family: $cocktail-font;
+}
+
+.card {
+  background-color: $charcoal;
+  border: 1px solid $gold;
+  width: 500px;
+}
+
+.card-body {
+  font-family: $text-font;
+  color: $gold;
+
+}
+
+.btn {
+  color: $gold;
+  border: 1px solid $gold;
+
+    &:hover {
+      background-color: $gold;
+      color: $charcoal;
+    }
+}

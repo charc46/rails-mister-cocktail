@@ -1,0 +1,28 @@
+.input {
+  background-color: $charcoal;
+  border: 1px solid $gold;
+  font-family: $text-font;
+  color: $gold;
+
+  &:focus {
+    background-color: $charcoal;
+    border: 1px solid $gold;
+    font-family: $text-font;
+    color: $gold;
+  }
+}
+
+label {
+  color: $gold;
+  font-family: $text-font;
+}
+
+.submit {
+  color: $gold;
+  border: 1px solid $gold;
+
+    &:hover {
+      background-color: $gold;
+      color: $charcoal;
+    }
+}
