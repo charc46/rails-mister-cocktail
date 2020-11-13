@@ -39,6 +39,10 @@
   padding: 0 100px;
 }
 
+.show-image {
+  border: 1px solid $gold;
+}
+
 @media (min-width: 100px) and (max-width: 575px) {
   .cocktail-container {
     width: 100vw;
