@@ -8,7 +8,7 @@
       <% end %>
     </ul>
     <% if @cocktail.photo.attached? %>
-      <%= cl_image_tag @cocktail.photo.key, height: 400, width:400, crop: :fill %>
+      <%= cl_image_tag @cocktail.photo.key, height: 400, width:400, crop: :fill, class: 'show-image' %>
     <% end %>
   </div>
   <div class="show-links">
