@@ -4,10 +4,10 @@
 }
 
 .cocktail-box {
-  flex-direction: column;
+  // flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 100%;
+  width: 100%;
 }
 
 h1 {
@@ -19,6 +19,10 @@ h1 {
   background-color: $charcoal;
   border: 1px solid $gold;
   width: 500px;
+
+  h5 {
+  font-family: $text-font;
+  }
 }
 
 .card-body {
@@ -34,4 +38,10 @@ h1 {
       background-color: $gold;
       color: $charcoal;
     }
+}
+
+@media (min-width: 100px) and (max-width: 575px) {
+  .card {
+    width: 100vw;
+  }
 }

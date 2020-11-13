@@ -6,3 +6,5 @@
   <%= f.input :description, input_html: { class: 'input' } %>
   <%= f.button :submit, input_html: { class: 'submit' } %>
 <% end %>
+
+<%= link_to 'Back To Cocktail', cocktail_path(@cocktail), class: "btn btn-outline-secondary mt-2" %>

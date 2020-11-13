@@ -31,3 +31,17 @@
     color: $charcoal;
   }
 }
+
+#burger {
+  color: $gold;
+  background-image: none;
+  font-size: 28px;
+  padding-top: 5px;
+}
+
+.navbar-toggler {
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}

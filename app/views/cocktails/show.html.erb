@@ -1,13 +1,19 @@
-<h1 class="cocktail-name"><%= @cocktail.name %></h1>
-<% if @cocktail.photo.attached? %>
-  <%= cl_image_tag @cocktail.photo.key, height: 200, width:200, crop: :fill %>
-<% end %>
-<ul>
-  <% @cocktail.doses.each do |dose| %>
-    <li class="cocktail-details"><%= dose.description %> - <%= dose.ingredient.name %></li>
-  <% end %>
-</ul>
-
-<%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail.id), class: 'btn btn-outline-secondary' %>
-<%= link_to 'Edit Cocktail', edit_cocktail_path(@cocktail.id), class: 'btn btn-outline-secondary' %>
-<%= link_to 'Delete Cocktail', cocktail_path(@cocktail.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-secondary delete-btn' %>
+<div class="cocktail-container">
+  <h1 class="cocktail-name text-center mb-5"><%= @cocktail.name %></h1>
+  <div class="cocktail-details">
+    <ul>
+      <h5 class="cocktail-doses">Ingredients</h5>
+      <% @cocktail.doses.each do |dose| %>
+        <li class="cocktail-doses"><%= dose.description %> - <%= dose.ingredient.name %></li>
+      <% end %>
+    </ul>
+    <% if @cocktail.photo.attached? %>
+      <%= cl_image_tag @cocktail.photo.key, height: 400, width:400, crop: :fill %>
+    <% end %>
+  </div>
+  <div class="show-links">
+    <%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail.id), class: 'btn btn-outline-secondary' %>
+    <%= link_to 'Edit Cocktail', edit_cocktail_path(@cocktail.id), class: 'btn btn-outline-secondary' %>
+    <%= link_to 'Delete Cocktail', cocktail_path(@cocktail.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-secondary delete-btn' %>
+  </div>
+</div>

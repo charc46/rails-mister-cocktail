@@ -10,9 +10,13 @@ require 'open-uri'
 
 
 # Seed ingredients
+Dose.delete_all
+Cocktail.delete_all
 Ingredient.delete_all
 
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 data = JSON.parse(open(url).read)
-
 data['drinks'].each { |i| Ingredient.create!(name: i.values[0]) }
+Ingredient.create(name: 'Mint')
+Ingredient.create(name: 'Egg White')
+Ingredient.create(name: 'Soda Water')

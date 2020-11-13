@@ -1,3 +1,5 @@
 <h1 class="text-center"> Edit <%= @cocktail.name %></h1>
 
 <%= render 'shared/cocktail_form' %>
+
+<%= link_to 'Back To Cocktail', cocktail_path(@cocktail), class: "btn btn-outline-secondary mt-2" %>

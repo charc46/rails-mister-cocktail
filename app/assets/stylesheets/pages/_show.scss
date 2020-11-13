@@ -1,9 +1,19 @@
+.cocktail-container {
+  width: 900px;
+  margin: 0 auto;
+}
+
 .cocktail-name {
   font-family: $cocktail-font;
   color: $gold;
 }
 
 .cocktail-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cocktail-doses {
   font-family: $text-font;
   color: $gold;
 }
@@ -20,4 +30,32 @@
 
 .delete-btn:hover {
   color: red;
+}
+
+.show-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding: 0 100px;
+}
+
+@media (min-width: 100px) and (max-width: 575px) {
+  .cocktail-container {
+    width: 100vw;
+  }
+  .cocktail-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .show-links {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn {
+    margin: 10px;
+  }
+
 }
