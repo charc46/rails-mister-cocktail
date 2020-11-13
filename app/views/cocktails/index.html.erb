@@ -2,7 +2,9 @@
 <div class="d-flex flex-wrap cocktail-box">
 <% @cocktails.each do |cocktail| %>
   <div class="card m-2 d-flex">
-    <%= cl_image_tag @cocktail.photo.key, class: 'card-img-top' %>
+    <% if cocktail.photo.attached? %>
+      <%= cl_image_tag cocktail.photo.key, class: 'card-img-top card-image' %>
+    <% end %>
     <div class="card-body">
       <h5 class="card-title"><%= cocktail.name %></h5>
       <%= link_to 'Discover more', cocktail_path(cocktail), class: "btn btn-outline-secondary" %>

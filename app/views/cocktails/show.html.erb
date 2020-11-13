@@ -1,5 +1,7 @@
 <h1 class="cocktail-name"><%= @cocktail.name %></h1>
-
+<% if @cocktail.photo.attached? %>
+  <%= cl_image_tag @cocktail.photo.key, height: 200, width:200, crop: :fill %>
+<% end %>
 <ul>
   <% @cocktail.doses.each do |dose| %>
     <li class="cocktail-details"><%= dose.description %> - <%= dose.ingredient.name %></li>
